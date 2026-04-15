@@ -1,0 +1,6 @@
+langchain-text-splitters
+langchain
+langchain-core
+databricks-vectorsearch
+sentence-transformers
+torch
