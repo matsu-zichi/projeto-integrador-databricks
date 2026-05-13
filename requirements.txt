@@ -4,8 +4,9 @@ langchain-core
 langchain-experimental
 databricks-vectorsearch
 sentence-transformers
-torch
 kagglehub
 databricks-sdk
 pandas
+polars
 tqdm
+dotenv

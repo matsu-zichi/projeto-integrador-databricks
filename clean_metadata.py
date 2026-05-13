@@ -44,14 +44,13 @@ mapping = {
 }
 
 def limpeza_filtro(df):
-    # - abstract não pode ser NULL
     # - paper_br deve ser apenas 0 ou 1
     # - Rank não pode ser NULL e deve ser numérico (o cast para 'double' transforma texto em NULL)
     return df.filter(
         (col("sha").isNotNull()) &
-        (col("abstract").isNotNull()) &
         (col("paper_br").isin("0", "1")) &
-        (col("Rank").isNotNull())
+        (col("Rank").isNotNull()) &
+        (col("publish_time").substr(1, 4) > "2020")
     )
 
 
